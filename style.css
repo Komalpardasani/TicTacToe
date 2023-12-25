@@ -1,0 +1,134 @@
+* {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  transition: 0.3s ease-in-out;
+  user-select: none;
+}
+
+body {
+  background: linear-gradient(to bottom, #485461, #28313b);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.game-container {
+  width: 200px;
+  height: 100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+}
+
+.game-container h2 {
+  margin: 0;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1.5rem;
+  color: #FFD700; /* Golden yellow */
+}
+
+.game-container .player-box {
+  border: 3px solid #8B4513; /* Saddle brown */
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #663300; /* Dark brown */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.game-container .player-box:hover {
+  transform: scale(1.1);
+}
+
+.game-container .player-box:nth-child(even) {
+  border-right: none;
+}
+
+.background-effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 50px;
+  background-color: #FFD700;
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 300px;
+  width: 300px;
+  margin: 30px auto;
+  border: 2px solid #8B4513;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.grid-box {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 2px solid #8B4513;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.grid-box:hover {
+  background-color: #FFD700;
+  transform: scale(1.05);
+}
+
+#restart-game {
+  background-color: #8B4513;
+  padding: 10px 25px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #FFD700;
+  display: none;
+  transition: padding 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+#restart-game:hover {
+  padding: 10px 40px;
+  background-color: #663300;
+  color: #FFD700;
+}
+
+#game-results {
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
